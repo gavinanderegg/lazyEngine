@@ -21,12 +21,6 @@ lazy.render = function() {
 	
 	lazy.prerender();
 	
-	if (demo.frames < 1000) {
-		demo.frames += lazy.dt;
-		return;
-	}
-	demo.frames = 0;
-	
 	_.each(['red', 'green', 'blue'], function(color) {
 		demo[color] += _.random(-2, 2);
 		
